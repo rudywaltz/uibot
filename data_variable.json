@@ -1,0 +1,60 @@
+[
+  {
+    "fallback": "nooooooooo",
+    "author_name": "Frontend Team",
+    "author_link": "ui.static.emarsys.net",
+    "color": "transparent",
+    "title": "Notification",
+    "title_link": "https://assets.emarsys.net/ui/latest/doc/notice.html"
+  },
+  {
+    "image_url": "http://f9f75612.ngrok.io/img/ui.png",
+    "thumb_url": "http://f9f75612.ngrok.io/img/notification.png"
+  },
+  {
+    "color": "good",
+    "fields": [
+      {
+          "title": "Dos",
+          "value": "Be placed in way that they appear when the user needs the information within their workflow.",
+          "short": false
+      }
+    ]
+  },
+  {
+    "color": "danger",
+    "fields": [
+      {
+          "title": "Don'ts",
+          "value": "Using notices as user assistance like help or tutorial.",
+          "short": false
+      }
+    ]
+  },
+  {
+    "color": "#39aad3",
+    "mrkdwn_in": ["fields"],
+    "fields": [
+      {
+        "title": "Atomic level",
+        "value": "Molecule",
+        "short": true
+      },
+      {
+          "title": "Implementation",
+          "value": "webcomponent",
+          "short": true
+      },
+      {
+          "title": "States",
+          "value": "`info` `success` `warning` `danger` `neutral`",
+          "short": true
+      },
+      {
+        "title": "Secret Info",
+        "value": "`closable` Makes the notification closable. Closed notification won't appear anymore.",
+        "short": false
+      }
+    ]
+  }
+]

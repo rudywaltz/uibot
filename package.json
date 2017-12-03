@@ -1,0 +1,30 @@
+{
+  "name": "uibot",
+  "version": "1.0.0",
+  "description": "Ui kit bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudywaltz/uibot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rudywaltz/uibot/issues"
+  },
+  "homepage": "https://github.com/rudywaltz/uibot#readme",
+  "dependencies": {
+    "express": "4.16.2",
+    "request": "2.83.0"
+  },
+  "devDependencies": {
+    "dotenv": "4.0.0",
+    "nodemon": "1.12.1"
+  },
+  "engines": {
+    "node": "8.9.1"
+  }
+}
