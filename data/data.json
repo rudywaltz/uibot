@@ -2,14 +2,14 @@
   {
     "fallback": "nooooooooo",
     "author_name": "Frontend Team",
-    "author_link": "ui.static.emarsys.net",
+    "author_link": "https://ui.static.emarsys.net",
     "color": "transparent",
     "title": "Notification",
-    "title_link": "https://assets.emarsys.net/ui/latest/doc/notice.html"
+    "title_link": "https://redirector.eservice.emarsys.net/ui/latest/doc/notice.html"
   },
   {
-    "image_url": "http://f9f75612.ngrok.io/img/ui.png",
-    "thumb_url": "http://f9f75612.ngrok.io/img/notification.png"
+    "image_url": "./img/ui.png",
+    "thumb_url": "./img/notification.png"
   },
   {
     "color": "good",

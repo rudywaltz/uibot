@@ -1,0 +1,38 @@
+[
+  {
+    "color": "#39aad3",
+    "title": "Notification",
+    "title_link": "https://redirector.eservice.emarsys.net/ui/latest/doc/notification.html",
+    "image_url": "http://f9f75612.ngrok.io/img/card.png",
+    "thumb_url": "http://f9f75612.ngrok.io/img/card.png",
+    "mrkdwn_in": ["fields"],
+    "pretext": "Good Morning! Just a reminder that this is...",
+    "text": "Be placed in way that they appear when the user needs the information within their workflow."
+  },
+  {
+    "color": "#39aad3",
+    "mrkdwn_in": ["fields"],
+    "fields": [
+      {
+        "title": "Atomic level",
+        "value": "Molecule",
+        "short": true
+      },
+      {
+          "title": "Implementation",
+          "value": "webcomponent",
+          "short": true
+      },
+      {
+          "title": "States",
+          "value": "`info` `success` `warning` `danger` `neutral`",
+          "short": false
+      },
+      {
+        "title": "Secret Info",
+        "value": "`closable` Makes the notification closable. Closed notification won't appear anymore.",
+        "short": false
+      }
+    ]
+  }
+]

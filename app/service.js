@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const data = require('../data_variable.json');
+const data = require('../data/data.json');
 
 class Service {
   constructor() {
