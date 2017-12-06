@@ -1,7 +1,7 @@
 // Import express and request modules
 var express = require('express');
 var request = require('request');
-require('dotenv').config();
+// require('dotenv').config();
 const Service = require('./app/service');
 
 
