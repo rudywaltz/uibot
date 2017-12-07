@@ -43,7 +43,7 @@ class Service {
     res.send('Ngrok is working! Path Hit: ' + req.url);
   });
 
-  this.express.post('/command', function(req, res) {
+  this.express.post('/component', function(req, res) {
     res.send({
       "attachments": data
     });
