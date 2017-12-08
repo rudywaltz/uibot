@@ -1,7 +1,12 @@
 module.exports = {
-  "parserOptions": { "ecmaVersion": 2017 },
   "env": { "es6": true, "node": true },
   "extends": "eslint:recommended",
+  "globals": {
+    "describe": false,
+    "expect": true,
+    "it": false
+  },
+  "parserOptions": { "ecmaVersion": 2017 },
   "rules": {
     "eol-last": ["error", "always"],
     "indent": ["error", 2],
