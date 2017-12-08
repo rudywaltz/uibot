@@ -1,16 +1,14 @@
 'use strict';
-
 const fs = require('fs');
 const path = require('path');
 const { curryN, map, pipe } = require('ramda');
 
 const prependPath = curryN(2, path.resolve);
 
-
 class Files {
 
   async readFilesInFolder(folder) {
-    return await pipe(
+    return pipe(
       map(prependPath(folder)),
       map(this.readFile),
       Promise.all.bind(Promise)
@@ -20,7 +18,7 @@ class Files {
 
   listFolder(folderPath) {
     return new Promise((resolve, reject) => {
-      fs.readdir(folderPath, (error, fileNames) => error ? reject(error) : resolve(fileNames))
+      fs.readdir(folderPath, (error, fileNames) => error ? reject(error) : resolve(fileNames));
     });
   }
 

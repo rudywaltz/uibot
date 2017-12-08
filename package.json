@@ -4,7 +4,9 @@
   "description": "Ui kit bot",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node app/index.js",
+    "start:dev": "nodemon app/index.js",
+    "lint": "eslint app"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/rudywaltz/uibot#readme",
   "dependencies": {
+    "eslint": "4.12.1",
     "express": "4.16.2",
     "ramda": "0.25.0",
     "request": "2.83.0"

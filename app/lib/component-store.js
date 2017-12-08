@@ -1,9 +1,5 @@
 'use strict';
-
-const fs = require('fs');
-const path = require('path');
-const files = require('../lib/files');
-
+const files = require('./files');
 
 class ComponentStore {
 
@@ -25,8 +21,5 @@ class ComponentStore {
   }
 
 }
-
-
-
 
 module.exports = new ComponentStore();
