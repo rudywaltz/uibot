@@ -18,6 +18,7 @@
   "homepage": "https://github.com/rudywaltz/uibot#readme",
   "dependencies": {
     "express": "4.16.2",
+    "ramda": "0.25.0",
     "request": "2.83.0"
   },
   "devDependencies": {

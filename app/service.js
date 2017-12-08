@@ -2,6 +2,8 @@
 
 const express = require('express');
 const data = require('../data/data.json');
+const componentStore = require('./component-store');
+const path = require('path');
 
 class Service {
   constructor() {
@@ -19,23 +21,23 @@ class Service {
 
     this.express.get('/oauth', (req, res)=> {
       if (!req.query.code) {
-          res.status(500);
-          res.send({"Error": "Looks like we're not getting code."});
-          console.log("Looks like we're not getting code.");
+        res.status(500);
+        res.send({"Error": "Looks like we're not getting code."});
+        console.log("Looks like we're not getting code.");
       } else {
-          request({
-              url: 'https://slack.com/api/oauth.access',
-              qs: {code: req.query.code, client_id: clientId, client_secret: clientSecret},
-              method: 'GET', //Specify the method
+        request({
+          url: 'https://slack.com/api/oauth.access',
+          qs: {code: req.query.code, client_id: clientId, client_secret: clientSecret},
+          method: 'GET', //Specify the method
 
-          }, function (error, response, body) {
-              if (error) {
-                  console.log(error);
-              } else {
-                  res.json(body);
+        }, function (error, response, body) {
+          if (error) {
+              console.log(error);
+          } else {
+              res.json(body);
 
-              }
-          })
+          }
+        })
       }
   });
 
@@ -45,12 +47,13 @@ class Service {
 
   this.express.post('/component', function(req, res) {
     res.send({
-      "attachments": data
+      "attachments": componentStore.getRandom()
     });
   });
  }
 
-  start() {
+  async start() {
+    await componentStore.load(path.resolve(__dirname, '../data'))
     this.express.listen(this.express.get('port'), () => {
       console.log('Node app is running on port', this.express.get('port'));
     });
