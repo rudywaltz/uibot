@@ -1,6 +1,7 @@
 'use strict';
 const componentStore = require('../../lib/component-store');
 const componentTemplate = require('../../lib/component-template');
+const errorTemplate = require('../../lib/error-template');
 const logger = require('../../lib/logger');
 
 module.exports = (req, res) => {
@@ -10,8 +11,9 @@ module.exports = (req, res) => {
   if (!componentData) {
     logger.log('ComponntByName', 'missingComponent', firstComponent);
   }
+  const errorMsg = 'Sorry we didn\'t find any component!';
 
   res.send({
-    attachments: componentData ? componentTemplate(componentData) : 'error'
+    attachments: componentData ? componentTemplate(componentData) : errorTemplate(errorMsg)
   });
 };
