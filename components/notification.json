@@ -1,7 +1,7 @@
 {
   "name": "Notification",
   "documentation": "https://redirector.eservice.emarsys.net/ui/latest/doc/notification.html",
-  "image": "http://uibot.herokuapp.com/img/notifiaction.png",
+  "image": "http://uibot.herokuapp.com/img/notification.png",
   "dos": "Be placed in way that they appear when the user needs the information within their workflow.",
   "donts": "Using notices as user assistance like help or tutorial.",
   "atomicLevel": "Molecule",
