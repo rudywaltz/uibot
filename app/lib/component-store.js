@@ -29,7 +29,7 @@ class ComponentStore {
   }
 
   getComponentByName(name) {
-    const component = this._components.find( element => { return element.name === name; });
+    const component = this._components.find( element => { return element.name.toLowerCase() === name.toLowerCase(); });
     return component;
   }
 
