@@ -1,5 +1,7 @@
 'use strict';
 const files = require('./files');
+const logger = require('./logger');
+
 
 class ComponentStore {
 
@@ -36,7 +38,9 @@ class ComponentStore {
 
   getRandom() {
     if (!this._components.length) return {};
-    const index = Math.floor(Math.random() * this._components.length);
+    const randNumber = Math.random();
+    logger.log('randNumb', randNumber);
+    const index = Math.floor(randNumber * this._components.length);
     return this._components[index];
   }
 

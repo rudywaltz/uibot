@@ -8,7 +8,7 @@ module.exports = (req, res) => {
   logger.log('ComponntByName', firstComponent);
   const componentData = componentStore.getComponentByName(firstComponent);
   if (!componentData) {
-    logger.log('ComponntByName', 'no founded', firstComponent);
+    logger.log('ComponntByName', 'missingComponent', firstComponent);
   }
 
   res.send({
