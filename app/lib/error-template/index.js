@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = text => {
-  return {
+  return [{
     color: 'danger',
     text: text
-  };
+  }];
 };
