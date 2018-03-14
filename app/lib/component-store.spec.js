@@ -17,7 +17,7 @@ describe('componentStore', () => {
   it('should get the component by name', async() => {
     await componentStore.load('path');
     componentStore.createComponentList();
-    return expect(componentStore.getComponentByName('TestComponent')).toEqual({name: 'TestComponent'});
+    return expect(componentStore.getComponentByName('testcomponent')).toEqual({name: 'TestComponent'});
   });
 
   it('should get empty object if pool is empty', () => {
