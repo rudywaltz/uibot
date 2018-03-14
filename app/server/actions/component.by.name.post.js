@@ -6,8 +6,6 @@ module.exports = (req, res) => {
   const firstComponent = req.body.text.split(' ')[0];
   const componentData = componentStore.getComponentByName(firstComponent);
   res.send({
-    attachments: componentData ?
-      componentTemplate(componentData) :
-      'error'
+    attachments: componentData ? componentTemplate(componentData) : 'error'
   });
 };
