@@ -1,11 +1,19 @@
 'use strict';
-const files = require('./files');
-
 class ComponentStore {
 
   constructor() {
-    this._components = [];
-    this._componentList = [];
+    this._components = [
+      { name: 'TestComponent',
+        implementation: 'testClass'
+      },
+      {
+        name: 'TestComponent2',
+        implementation: 'testWebcomponent'
+      }
+    ];
+    this._componentList = ['TestComponent'];
+
+    this.getRandom = jest.fn();
   }
 
   restore() {
@@ -13,10 +21,7 @@ class ComponentStore {
     this._componentList = [];
   }
 
-  async load(componentPath) {
-    const componentContents = await files.readFilesInFolder(componentPath);
-    return this._components  = componentContents.map(JSON.parse);
-  }
+
 
   createComponentList() {
     this._components.forEach((component) => {
@@ -32,14 +37,6 @@ class ComponentStore {
     const component = this._components.find( element => { return element.name === name; });
     return component;
   }
-
-
-  getRandom() {
-    if (!this._components.length) return {};
-    const index = Math.floor(Math.random() * this._components.length);
-    return this._components[index];
-  }
-
 }
 
 module.exports = new ComponentStore();

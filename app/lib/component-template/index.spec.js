@@ -16,8 +16,9 @@ describe('componentTemplate', () => {
       secretInfo: 'If you need help, ask doc_Loc - that\'s what they are there for!'
     });
 
-    expect(result).to.deep.equal([
+    expect(result).toEqual([
       {
+        response_type: 'in_channel',
         fallback: 'Button',
         author_name: 'Frontend Team',
         author_link: 'https://ui.static.emarsys.net',

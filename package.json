@@ -6,9 +6,18 @@
   "scripts": {
     "start": "node app/index.js",
     "start:dev": "nodemon app/index.js",
-    "test": "mocha \"app/**/*.spec.js\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint app",
-    "validate": "npm run lint && npm test"
+    "validate": "npm run lint && npm test",
+    "server": "ngrok http 4390"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ]
   },
   "repository": {
     "type": "git",
@@ -21,15 +30,16 @@
   },
   "homepage": "https://github.com/rudywaltz/uibot#readme",
   "dependencies": {
-    "express": "4.16.2",
+    "body-parser": "1.18.2",
+    "express": "4.16.3",
     "ramda": "0.25.0",
-    "request": "2.83.0"
+    "request": "2.85.0"
   },
   "devDependencies": {
     "chai": "4.1.2",
-    "eslint": "4.12.1",
-    "mocha": "4.0.1",
-    "nodemon": "1.12.1"
+    "eslint": "4.18.1",
+    "jest": "22.4.2",
+    "nodemon": "1.15.1"
   },
   "engines": {
     "node": "8.9.1"

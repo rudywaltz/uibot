@@ -1,0 +1,11 @@
+{
+  "name": "Notification",
+  "documentation": "https://redirector.eservice.emarsys.net/ui/latest/doc/notification.html",
+  "image": "http://uibot.herokuapp.com/img/notifiaction.png",
+  "dos": "Be placed in way that they appear when the user needs the information within their workflow.",
+  "donts": "Using notices as user assistance like help or tutorial.",
+  "atomicLevel": "Molecule",
+  "implementation": "Webcomponent",
+  "states": ["default", "info", "success", "warning", "danger", "neutral"],
+  "secretInfo": "Send event in Analylics with the key"
+}

@@ -4,7 +4,9 @@ module.exports = {
   "globals": {
     "describe": false,
     "expect": true,
-    "it": false
+    "afterEach": true,
+    "it": false,
+    "jest": true
   },
   "parserOptions": { "ecmaVersion": 2017 },
   "rules": {

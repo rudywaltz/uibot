@@ -3,6 +3,7 @@
 module.exports = componentConfig => {
   return [
     {
+      response_type: 'in_channel',
       fallback: componentConfig.name,
       author_name: 'Frontend Team',
       author_link: 'https://ui.static.emarsys.net',
